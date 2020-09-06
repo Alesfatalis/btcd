@@ -913,6 +913,7 @@ func loadConfig() (*config, []string, error) {
 	// addresses.
 	if !cfg.DisableRPC && cfg.DisableTLS {
 		allowedTLSListeners := map[string]struct{}{
+			"0.0.0.0": {},
 			"localhost": {},
 			"127.0.0.1": {},
 			"::1":       {},
